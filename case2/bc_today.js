@@ -1,11 +1,11 @@
-
+"use strict"
 /*
    New Perspectives on HTML5 and CSS3, 7th Edition
    Tutorial 9
    Case Problem 2
 
    Today at the Union Script
-   Author: 
+   Author: Isaiah Romo
    Date:   
    
    This script uses the getEvent() function to return the
@@ -13,6 +13,12 @@
    student union.
 
 */
+var thisDate = new Date();
+var dateString = thisDate.toLocaleString;
+var dateHTML = "<h2>" + dateString + "</h2>";
+var thisDay = thisDate.getDay();
+var eventHTML = getEvent(thisDay);
+document.getElementById("unionToday").insertAdjacentHTML("afterbegin", dateHTML + eventHTML);
 
 
 
