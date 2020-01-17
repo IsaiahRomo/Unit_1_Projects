@@ -14,11 +14,11 @@
 
 */
 var thisDate = new Date();
-var dateString = thisDate.toLocaleString;
+var dateString = thisDate.toLocaleDateString();
 var dateHTML = "<h2>" + dateString + "</h2>";
 var thisDay = thisDate.getDay();
 var eventHTML = getEvent(thisDay);
-document.getElementById("unionToday").insertAdjacentHTML("afterbegin", dateHTML + eventHTML);
+document.getElementById("unionToday").insertAdjacentHTML("beforeend", dateHTML + eventHTML);
 
 
 
