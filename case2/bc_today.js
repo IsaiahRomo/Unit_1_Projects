@@ -14,9 +14,12 @@
 
 */
 var thisDate = new Date();
+// gets the date of today
 var dateString = thisDate.toLocaleDateString();
+// puts the date in the h2
 var dateHTML = "<h2>" + dateString + "</h2>";
 var thisDay = thisDate.getDay();
+// uses this day variable as a parameter for the function getEvent
 var eventHTML = getEvent(thisDay);
 document.getElementById("unionToday").insertAdjacentHTML("beforeend", dateHTML + eventHTML);
 

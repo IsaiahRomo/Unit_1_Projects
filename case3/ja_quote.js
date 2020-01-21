@@ -13,11 +13,17 @@
    quotation tag in the Web page.
 
 */
-randomInt();
-var randomQ = randomInt();
-var quoteElem = 
+// calls function
+randomInt(0,10);
+// stores the random number in the variable
+var randomQ = randomInt(0,10);
+// gets the first element tag name in the page
+var quoteElem = document.getElementsByTagName("quote")[0];
+// generate random quote and changes the innerHTML
+quoteElem.innerHTML = getQuote(randomQ);
 function randomInt(lowest, size){
    var rand = Math.floor(Math.random() * size) + lowest;
+   return rand;
 }
 
 function getQuote(n) {
