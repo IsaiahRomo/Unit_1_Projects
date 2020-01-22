@@ -10,6 +10,7 @@
 
 */
 var thisTime = new Date();
+// gets today's date
 var timeStr = thisTime.toLocaleString();
 document.getElementById("timeStamp").innerHTML = timeStr;
 var thisHour = thisTime.getHours();
